@@ -15,4 +15,4 @@ Everyone, please put issues, questions, requests, and suggestions in the issues 
 
 Releases: https://github.com/biden2020prez/lgflip-kosher/releases/
 
-Credits: Apps4Flip (apps4flip.com is a great guide to installing and removing apps on flip phones, with an amazing community of flip phone users at forums.apps4flip.com)
+Credits: Apps4Flip (apps4flip.com is a great guide to installing and removing apps on flip phones, with an amazing community of flip phone users at [forums.apps4flip.com](https://forums.apps4flip.com))
