@@ -17,14 +17,10 @@ Everyone, please put issues, questions, requests, and suggestions in the issues 
 
 Releases: https://github.com/biden2020prez/lgflip-kosher/releases/
 
-[size=8]Credits: 
+Credits: 
 
-Apps4flip.com (everything - also for kashering Google Maps!)
-
-https://forums.apps4flip.com/u/Uri (I used his work to create Rebel 4 settings mod launcher)
-
-https://forums.apps4flip.com/u/xxdeafgirl (Rebel 4 settings mod/accessibility)
-
-https://forums.apps4flip.com/u/boruch (Google Maps APK)
-
-https://modifiedappsforflip.com (JewishMusic.FM, anydesk, xplore file manager, Amazon)
+Apps4flip.com (everything - also for kashering Google Maps!)<br />
+https://forums.apps4flip.com/u/Uri (I used his work to create Rebel 4 settings mod launcher)<br />
+https://forums.apps4flip.com/u/xxdeafgirl (Rebel 4 settings mod/accessibility)<br />
+https://forums.apps4flip.com/u/boruch (Google Maps APK)<br />
+https://modifiedappsforflip.com (JewishMusic.FM, anydesk, xplore file manager, Amazon)<br />
