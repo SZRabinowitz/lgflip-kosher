@@ -11,8 +11,14 @@ For anyone curious, I just created two batch files with choices (using notepad),
 
 Everyone, please put issues, questions, requests, and suggestions in the issues tab, and I'll try to help you the best I can.
 
+[The Current Version](https://github.com/biden2020prez/lgflip-kosher/releases/tag/v1.0.1) has 38 apps available to install.
+
 
 
 Releases: https://github.com/biden2020prez/lgflip-kosher/releases/
 
-Credits: Apps4Flip (apps4flip.com is a great guide to installing and removing apps on flip phones, with an amazing community of flip phone users at [forums.apps4flip.com](https://forums.apps4flip.com))
+Credits: Apps4flip.com (everything - also for kashering Google Maps!)
+https://forums.apps4flip.com/u/Uri (I used his work to create Rebel 4 settings mod launcher)
+https://forums.apps4flip.com/u/xxdeafgirl (Rebel 4 settings mod/accessibility)
+https://forums.apps4flip.com/u/boruch (Google Maps APK)
+https://modifiedappsforflip.com (JewishMusic.FM, anydesk, xplore file manager)
