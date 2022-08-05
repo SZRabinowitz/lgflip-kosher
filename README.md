@@ -17,7 +17,9 @@ Everyone, please put issues, questions, requests, and suggestions in the issues 
 
 Releases: https://github.com/biden2020prez/lgflip-kosher/releases/
 
-Credits: Apps4flip.com (everything - also for kashering Google Maps!)
+[size=8]Credits: 
+
+Apps4flip.com (everything - also for kashering Google Maps!)
 
 https://forums.apps4flip.com/u/Uri (I used his work to create Rebel 4 settings mod launcher)
 
