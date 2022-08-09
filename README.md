@@ -2,18 +2,7 @@
 Remove preinstalled apps from your LG Flip Phone and add new apps
 
 
-
-[The first version](https://github.com/biden2020prez/lgflip-kosher/releases/tag/v1.0.0) was released, with limited functionality.
-It can remove Browser, FM Radio, e-mail, Text messaging, Hotspot, and Video from your phone.
-
-For anyone curious, I just created two batch files with choices (using notepad), and used iexpress to put the batch files, plus ADB files into a single EXE file, which I put here to download.
-
-
 Everyone, please put issues, questions, requests, and suggestions in the issues tab, and I'll try to help you the best I can.
-
-[The Current Version](https://github.com/biden2020prez/lgflip-kosher/releases/tag/v1.0.1) has 38 apps available to install.
-
-
 
 Releases: https://github.com/biden2020prez/lgflip-kosher/releases/
 
@@ -24,3 +13,10 @@ https://forums.apps4flip.com/u/Uri (I used his work to create Rebel 4 settings m
 https://forums.apps4flip.com/u/xxdeafgirl (Rebel 4 settings mod/accessibility)<br />
 https://forums.apps4flip.com/u/boruch (Google Maps APK)<br />
 https://modifiedappsforflip.com (JewishMusic.FM, anydesk, xplore file manager, Amazon)<br />
+https://forums.apps4flip.com/u/darth (for the one-size-fits-all accessibility command)<br/>
+
+If you think you belong in the Credits, make a new issue or post in [Apps4flip forums](https://forums.apps4flip.com/d/631-i-made-a-very-easy-diy-filter-for-dummies-with-lg-phones/)
+
+# Compatible Phones
+While at this point, the uninstalling apps feature only works on LG phones, the installing apps feature should work on most phones. (I take no responsibility for anything you try).
+If anyone gives me the commands for removing apps on any other models, I can add them.
