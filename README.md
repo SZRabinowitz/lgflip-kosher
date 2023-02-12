@@ -21,4 +21,4 @@ If you think you belong in the Credits, make a new issue or post in [Apps4flip f
 While at this point, the uninstalling apps feature only works on LG phones, the installing apps feature should work on most phones. (I take no responsibility for anything you try).
 If anyone gives me the commands for removing apps on any other models, I can add them.
 
-https://visitor-badge.glitch.me/badge?page_id=page.id&left_color=green&right_color=red
+![](https://visitor-badge.glitch.me/badge?page_id=page.id&left_color=green&right_color=red)
