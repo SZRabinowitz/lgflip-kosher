@@ -1,7 +1,8 @@
 # lgflip-kosher
 Remove preinstalled apps from your LG Flip Phone and add new apps
 
-![](https://visitor-badge.glitch.me/badge?page_id=biden2020prez.lgflip-kosher&left_color=green&right_color=red) ![Github All Releases](https://img.shields.io/github/downloads/biden2020prez/lgflip-kosher/total.svg)
+![](https://visitor-badge.glitch.me/badge?page_id=biden2020prez.lgflip-kosher&left_color=green&right_color=red) 
+![Github All Releases](https://img.shields.io/github/downloads/biden2020prez/lgflip-kosher/total.svg)
 
 Everyone, please put issues, questions, requests, and suggestions in the issues tab, and I'll try to help you the best I can.
 
