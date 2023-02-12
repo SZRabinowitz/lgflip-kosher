@@ -22,3 +22,6 @@ While at this point, the uninstalling apps feature only works on LG phones, the 
 If anyone gives me the commands for removing apps on any other models, I can add them.
 
 ![](https://visitor-badge.glitch.me/badge?page_id=biden2020prez.lgflip-kosher&left_color=green&right_color=red)
+:
+
+![Github All Releases](https://img.shields.io/github/downloads/biden2020prez/lgflip-kosher/total.svg)
