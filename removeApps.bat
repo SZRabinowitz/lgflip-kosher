@@ -3,7 +3,7 @@
 cls
 echo/
 ECHO 1. Remove Browser (Highly Recommended!!!)
-ECHO 2. Remove e-mail
+ECHO 2. Remove Email
 ECHO 3. Remove Hotspot
 ECHO 4. Remove FM Radio
 ECHO 5. Remove Video
@@ -59,14 +59,14 @@ if errorlevel 1 goto email-y
 adb shell pm uninstall -k --user 0 com.lge.email
 ECHO.
 ECHO DONE
-ECHO E-mail has now been removed
+ECHO Email has now been removed
 PAUSE
 cls
 goto start
 
 :email-n
 ECHO.
-ECHO Not a problem, e-mail will remain on your phone.
+ECHO Not a problem, email will remain on your phone.
 PAUSE
 cls
 goto start
@@ -146,6 +146,8 @@ if errorlevel 1 goto messages-y
 
 :messages-y
 adb shell pm uninstall -k --user 0 com.android.mms
+adb shell pm uninstall -k --user 0 com.verizon.messaging.vzmsgs
+ECHO If you got a message say app not installed for 0, but you could just ignore that.
 ECHO.
 ECHO DONE
 ECHO Text Messaging has been removed.
