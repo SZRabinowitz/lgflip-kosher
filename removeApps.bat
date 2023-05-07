@@ -36,8 +36,8 @@ if not errorlevel 1 goto browser
 
 :browser-y 
 adb shell pm uninstall -k --user 0 com.android.browser
-cls 
-ECHO Browser successfully removed!
+ECHO. 
+ECHO DONE
 PAUSE
 cls
 goto start
@@ -57,8 +57,9 @@ if errorlevel 1 goto email-y
 
 :email-y
 adb shell pm uninstall -k --user 0 com.lge.email
-cls
-ECHO Email successfully removed!
+ECHO.
+ECHO DONE
+ECHO Email has now been removed
 PAUSE
 cls
 goto start
@@ -80,12 +81,12 @@ if errorlevel 1 goto hotspot-y
 
 :hotspot-y
 adb shell pm uninstall -k --user 0 com.lge.hotspotlauncher
-cls
-ECHO Hotspot successfully removed!
+ECHO.
+ECHO DONE
+ECHO Hotspot has been removed
 PAUSE
 cls
 goto start
-
 :hotspot-n
 ECHO.
 ECHO That's fine, enjoy your hotspot!
@@ -101,8 +102,9 @@ if errorlevel 1 goto radio-y
 
 :radio-y
 adb shell pm uninstall -k --user 0 com.lge.fmradio
-cls
-ECHO FM Radio successfully removed!
+ECHO. 
+ECHO DONE
+ECHO FM Radio has been removed
 PAUSE
 cls
 goto start
@@ -122,8 +124,9 @@ if errorlevel 1 goto video-y
 
 :video-y
 adb shell pm uninstall -k --user 0 com.lge.videoplayer
-cls
-ECHO Video successfully removed!
+ECHO.
+ECHO DONE
+ECHO Video has been removed
 PAUSE
 cls
 goto start
@@ -144,8 +147,10 @@ if errorlevel 1 goto messages-y
 :messages-y
 adb shell pm uninstall -k --user 0 com.android.mms
 adb shell pm uninstall -k --user 0 com.verizon.messaging.vzmsgs
-cls
-ECHO Text Messaging successfully removed!
+ECHO If you got a message say app not installed for 0, but you could just ignore that.
+ECHO.
+ECHO DONE
+ECHO Text Messaging has been removed.
 PAUSE
 cls
 goto start
@@ -156,6 +161,22 @@ ECHO Sure, your texts will be left untouched.
 PAUSE
 cls
 goto start
+
+:packageInstaller
+ECHO.
+%SystemRoot%\System32\choice.exe /C YN /N /M "Are you sure you want to remove app installation from your phone? (You can still install apps via ADB) [Y/N]: "
+if errorlevel 2 goto installer-n
+if errorlevel 1 goto installer-y
+
+:installer-y
+adb shell pm uninstall -k --user 0 com.android.packageinstaller
+ECHO.
+ECHO DONE
+ECHO App installation has been removed.
+PAUSE
+cls
+goto start
+
 
 :end
 ECHO.
