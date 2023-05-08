@@ -35,7 +35,7 @@ if errorlevel 1 goto browser-y
 if not errorlevel 1 goto browser
 
 :browser-y 
-adb shell pm uninstall --user 0 com.android.browser
+adb shell pm uninstall -k --user 0 com.android.browser
 ECHO. 
 ECHO Browser has been removed.
 PAUSE
@@ -56,7 +56,7 @@ if errorlevel 2 goto email-n
 if errorlevel 1 goto email-y
 
 :email-y
-adb shell pm uninstall --user 0 com.lge.email
+adb shell pm uninstall -k --user 0 com.lge.email
 ECHO.
 ECHO Email has been removed.
 PAUSE
@@ -77,7 +77,7 @@ if errorlevel 2 goto hotspot-n
 if errorlevel 1 goto hotspot-y
 
 :hotspot-y
-adb shell pm uninstall --user 0 com.lge.hotspotlauncher
+adb shell pm uninstall -k --user 0 com.lge.hotspotlauncher
 ECHO.
 ECHO Hotspot has been removed.
 PAUSE
@@ -98,7 +98,7 @@ if errorlevel 2 goto radio-n
 if errorlevel 1 goto radio-y
 
 :radio-y
-adb shell pm uninstall --user 0 com.lge.fmradio
+adb shell pm uninstall -k --user 0 com.lge.fmradio
 ECHO. 
 ECHO FM Radio has been removed.
 PAUSE
@@ -119,7 +119,7 @@ if errorlevel 2 goto video-n
 if errorlevel 1 goto video-y
 
 :video-y
-adb shell pm uninstall --user 0 com.lge.videoplayer
+adb shell pm uninstall -k --user 0 com.lge.videoplayer
 ECHO.
 ECHO Video has been removed.
 PAUSE
@@ -140,8 +140,8 @@ if errorlevel 2 goto messages-n
 if errorlevel 1 goto messages-y
 
 :messages-y
-adb shell pm uninstall --user 0 com.android.mms >nul
-adb shell pm uninstall --user 0 com.verizon.messaging.vzmsgs >nul
+adb shell pm uninstall -k --user 0 com.android.mms >nul
+adb shell pm uninstall -k --user 0 com.verizon.messaging.vzmsgs >nul
 ECHO.
 ECHO Text Messaging has been removed.
 PAUSE
