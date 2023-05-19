@@ -4,20 +4,18 @@ cls
 echo/
 ECHO 1. Remove Browser (Highly Recommended!!!)
 ECHO 2. Remove Email
-ECHO 3. Remove Hotspot
-ECHO 4. Remove FM Radio
-ECHO 5. Remove Video
-ECHO 6. Remove Text Messages
-ECHO 7. Disable App Installation
+ECHO 3. Remove FM Radio
+ECHO 4. Remove Video
+ECHO 5. Remove Text Messages
+ECHO 6. Disable App Installation
 ECHO D. All Done, I don't want to remove any more apps.
 echo.
-%SystemRoot%\System32\choice.exe /C 1234567D /N /M "Type the number of what you want to remove, and press enter. If you don't want to remove any more apps, type [D]: "
-if errorlevel 8 goto end
-if errorlevel 7 goto installer
-if errorlevel 6 goto messages
-if errorlevel 5 goto video
-if errorlevel 4 goto radio
-if errorlevel 3 goto hotspot
+%SystemRoot%\System32\choice.exe /C 123456D /N /M "Type the number of what you want to remove, and press enter. If you don't want to remove any more apps, type [D]: "
+if errorlevel 7 goto end
+if errorlevel 6 goto installer
+if errorlevel 5 goto messages
+if errorlevel 4 goto video
+if errorlevel 3 goto radio
 if errorlevel 2 goto email
 if errorlevel 1 goto browser
 if not errorlevel 1 goto error-start
@@ -66,27 +64,6 @@ goto start
 :email-n
 ECHO.
 ECHO Not a problem, email will remain on your phone.
-PAUSE
-cls
-goto start
-
-:hotspot
-ECHO. 
-%SystemRoot%\System32\choice.exe /C YN /N /M "Are you sure you want to remove the hotspot from your phone? [Y/N]: "
-if errorlevel 2 goto hotspot-n
-if errorlevel 1 goto hotspot-y
-
-:hotspot-y
-adb shell pm uninstall -k --user 0 com.lge.hotspotlauncher
-ECHO.
-ECHO Hotspot has been removed.
-PAUSE
-cls
-goto start
-
-:hotspot-n
-ECHO.
-ECHO That's fine, enjoy your hotspot!
 PAUSE
 cls
 goto start
