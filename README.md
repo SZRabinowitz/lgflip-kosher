@@ -15,6 +15,7 @@ https://forums.apps4flip.com/u/xxdeafgirl (Rebel 4 settings mod/accessibility)<b
 https://forums.apps4flip.com/u/boruch (Google Maps APK)<br />
 https://modifiedappsforflip.com (JewishMusic.FM, anydesk, xplore file manager, Amazon)<br />
 https://forums.apps4flip.com/u/darth (for the one-size-fits-all accessibility command)<br/>
+FlipPhoneBochur for contributing!
 
 If you think you belong in the Credits, make a new issue or post in [Apps4flip forums](https://forums.apps4flip.com/d/631-i-made-a-very-easy-diy-filter-for-dummies-with-lg-phones/)
 
