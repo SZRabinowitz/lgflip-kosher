@@ -3,19 +3,19 @@
 cls
 echo/
 ECHO 1. Remove Browser (Highly Recommended!!!)
-ECHO 2. Remove e-mail
-ECHO 3. Remove Hotspot
-ECHO 4. Remove FM Radio
-ECHO 5. Remove Video
-ECHO 6. Remove Text Messages
+ECHO 2. Remove Email
+ECHO 3. Remove FM Radio
+ECHO 4. Remove Video
+ECHO 5. Remove Text Messages
+ECHO 6. Disable App Installation
 ECHO D. All Done, I don't want to remove any more apps.
 echo.
 %SystemRoot%\System32\choice.exe /C 123456D /N /M "Type the number of what you want to remove, and press enter. If you don't want to remove any more apps, type [D]: "
 if errorlevel 7 goto end
-if errorlevel 6 goto messages
-if errorlevel 5 goto video
-if errorlevel 4 goto radio
-if errorlevel 3 goto hotspot
+if errorlevel 6 goto installer
+if errorlevel 5 goto messages
+if errorlevel 4 goto video
+if errorlevel 3 goto radio
 if errorlevel 2 goto email
 if errorlevel 1 goto browser
 if not errorlevel 1 goto error-start
@@ -27,9 +27,7 @@ goto start
 
 :browser
 ECHO.
-ECHO Please Confirm!
-echo/
-%SystemRoot%\System32\choice.exe /C YN /N /M "Are you sure you want to uninstall the browser [Y/N]: "
+%SystemRoot%\System32\choice.exe /C YN /N /M "Are you sure you want to remove the browser? [Y/N]: "
 if errorlevel 2 goto browser-n
 if errorlevel 1 goto browser-y
 if not errorlevel 1 goto browser
@@ -37,7 +35,7 @@ if not errorlevel 1 goto browser
 :browser-y 
 adb shell pm uninstall -k --user 0 com.android.browser
 ECHO. 
-ECHO DONE
+ECHO Browser has been removed.
 PAUSE
 cls
 goto start
@@ -51,45 +49,21 @@ goto start
 
 :email
 ECHO.
-%SystemRoot%\System32\choice.exe /C YN /N /M "Are you sure you want to uninstall e-mail from your phone? [Y/N]: "
+%SystemRoot%\System32\choice.exe /C YN /N /M "Are you sure you want to remove Email from your phone? [Y/N]: "
 if errorlevel 2 goto email-n
 if errorlevel 1 goto email-y
 
 :email-y
 adb shell pm uninstall -k --user 0 com.lge.email
 ECHO.
-ECHO DONE
-ECHO E-mail has now been removed
+ECHO Email has been removed.
 PAUSE
 cls
 goto start
 
 :email-n
 ECHO.
-ECHO Not a problem, e-mail will remain on your phone.
-PAUSE
-cls
-goto start
-
-:hotspot
-ECHO.
-ECHO Please confirm! 
-ECHO. 
-%SystemRoot%\System32\choice.exe /C YN /N /M "Are you sure you want to remove the hotspot from your phone? [Y/N]: "
-if errorlevel 2 goto hotspot-n
-if errorlevel 1 goto hotspot-y
-
-:hotspot-y
-adb shell pm uninstall -k --user 0 com.lge.hotspotlauncher
-ECHO.
-ECHO DONE
-ECHO Hotspot has been removed
-PAUSE
-cls
-goto start
-:hotspot-n
-ECHO.
-ECHO That's fine, enjoy your hotspot!
+ECHO Not a problem, email will remain on your phone.
 PAUSE
 cls
 goto start
@@ -103,8 +77,7 @@ if errorlevel 1 goto radio-y
 :radio-y
 adb shell pm uninstall -k --user 0 com.lge.fmradio
 ECHO. 
-ECHO DONE
-ECHO FM Radio has been removed
+ECHO FM Radio has been removed.
 PAUSE
 cls
 goto start
@@ -125,8 +98,7 @@ if errorlevel 1 goto video-y
 :video-y
 adb shell pm uninstall -k --user 0 com.lge.videoplayer
 ECHO.
-ECHO DONE
-ECHO Video has been removed
+ECHO Video has been removed.
 PAUSE
 cls
 goto start
@@ -145,9 +117,9 @@ if errorlevel 2 goto messages-n
 if errorlevel 1 goto messages-y
 
 :messages-y
-adb shell pm uninstall -k --user 0 com.android.mms
+adb shell pm uninstall -k --user 0 com.android.mms >nul
+adb shell pm uninstall -k --user 0 com.verizon.messaging.vzmsgs >nul
 ECHO.
-ECHO DONE
 ECHO Text Messaging has been removed.
 PAUSE
 cls
@@ -160,21 +132,26 @@ PAUSE
 cls
 goto start
 
-:packageInstaller
+:installer
 ECHO.
-%SystemRoot%\System32\choice.exe /C YN /N /M "Are you sure you want to remove app installation from your phone? (You can still install apps via ADB) [Y/N]: "
+%SystemRoot%\System32\choice.exe /C YN /N /M "Are you sure you want to disable app installation on your phone? [Y/N]: "
 if errorlevel 2 goto installer-n
 if errorlevel 1 goto installer-y
 
 :installer-y
-adb shell pm uninstall -k --user 0 com.android.packageinstaller
+adb shell pm disable-user --user 0 com.android.defcontainer
 ECHO.
-ECHO DONE
-ECHO App installation has been removed.
+ECHO App installation has been disabled.
 PAUSE
 cls
 goto start
 
+:installer-n
+ECHO.
+ECHO No problem! You can still install apps on your phone.
+PAUSE
+cls
+goto start
 
 :end
 ECHO.
